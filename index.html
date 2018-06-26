@@ -10,11 +10,6 @@
       <div id="dodger" style="bottom: 0px; left: 180px;"></div>
     </div>
     <script>
-      /*var dodger = document.getElementById('dodger')
-      dodger.style.backgroundColor = "#FF69B4"
-      dodger.style.bottom = "0px"*/
-      document.addEventListener('keydown', function(e){console.log(e.which)})
-      
       function moveDodgerLeft() {
         var leftNumbers = dodger.style.left.replace('px', '')
         var left = parseInt(leftNumbers, 10)
@@ -29,10 +24,7 @@
        }
 })
 
-      document.addEventListener('keydown', function(e) {
-      if (e.which === 37) {
-        moveDodgerRight()
-       }
+
        
       function moveDodgerRight() {
         var rightNumbers = dodger.style.right.replace('px', '')
@@ -41,6 +33,11 @@
         if (right > 0) {
           dodger.style.right = `${right - 1}px`}
       }
+      
+            document.addEventListener('keydown', function(e) {
+      if (e.which === 37) {
+        moveDodgerRight()
+       }
     </script>
   </body>
 </html>
